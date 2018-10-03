@@ -1,0 +1,8 @@
+#!/bin/bash
+
+MINE=usr_
+sudo systemctl disable $MINE$1
+
+SYSDIR=/lib/systemd/system
+sudo rm $SYSDIR/$MINE$1.service
+

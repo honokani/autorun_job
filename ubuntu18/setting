@@ -1,0 +1,13 @@
+#!/bin/bash
+
+HERE=$(pwd)
+PROJECT_NAME=$1
+
+# create service file
+SHELL_NAME=start.sh
+python $HERE/create_service.py $HERE $PROJECT_NAME $SHELL_NAME
+
+SYSDIR=/lib/systemd/system
+MINE=usr_
+sudo ln -s $HERE/$PROJECT_NAME/$MINE$PROJECT_NAME.service $SYSDIR/$MINE$PROJECT_NAME.service
+

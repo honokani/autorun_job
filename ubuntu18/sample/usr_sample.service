@@ -1,0 +1,10 @@
+[Unit]
+Description=activate user-program sample
+
+[Service]
+Type=simple
+ExecStart=/home/kss_admin/ws/tmp/local_auto/sample/start.sh
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

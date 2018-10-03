@@ -1,0 +1,6 @@
+#!/bin/bash
+
+MINE=usr_
+sudo systemctl status $MINE$1
+echo stat:`sudo systemctl list-unit-files --type=service | grep $1`
+
